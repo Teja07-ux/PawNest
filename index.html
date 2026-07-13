@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawNest | Happy Pets, Happy Owners</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        🐾 PawNest
+    </div>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <nav id="nav-menu">
+
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Pricing</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+
+    </nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Happy Pets,<br>Happy Owners </h1>
+
+<p class="tagline">🐾 Trusted Home Dog Boarding</p>
+
+<p>
+A safe, loving home where your dog is treated like family.
+Daily walks, playtime, cuddles and regular photo updates.
+</p>
+
+<button>Book a Stay</button>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/hero.jpg" alt="Labrador">
+
+</div>
+
+</section>
+
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+
+    if(navMenu.classList.contains("active")){
+        menuToggle.innerHTML = "✕";
+    }else{
+        menuToggle.innerHTML = "☰";
+    }
+});
+</script>
+
+</body>
+</html>
