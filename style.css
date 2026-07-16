@@ -253,6 +253,167 @@ nav a:hover{
 }
 
 /* =========================
+   Reviews
+========================= */
+
+.reviews{
+    padding:90px 8%;
+    background:white;
+    text-align:center;
+}
+
+.reviews h2{
+    font-size:42px;
+    color:#6D4C41;
+    margin-bottom:15px;
+}
+
+.review-intro{
+    font-size:19px;
+    color:#666;
+    margin-bottom:55px;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.review-card{
+    background:#FDF8F2;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+    text-align:left;
+}
+
+.review-card:hover{
+    transform:translateY(-8px);
+}
+
+.stars{
+    color:#F4A261;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.review-card p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:25px;
+    font-style:italic;
+}
+
+.review-user{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.avatar{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#F4A261;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    font-weight:600;
+}
+
+.review-user h4{
+    color:#6D4C41;
+    margin-bottom:5px;
+}
+
+.review-user span{
+    color:#777;
+    font-size:14px;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+    padding:90px 8%;
+    background:#FDF8F2;
+    text-align:center;
+}
+
+.faq h2{
+    font-size:42px;
+    color:#6D4C41;
+    margin-bottom:15px;
+}
+
+.faq-intro{
+    font-size:19px;
+    color:#666;
+    margin-bottom:50px;
+}
+
+.faq-container{
+    max-width:850px;
+    margin:auto;
+}
+
+.faq-item{
+    background:white;
+    border-radius:15px;
+    margin-bottom:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.faq-question{
+    width:100%;
+    border:none;
+    background:white;
+    padding:24px 30px;
+    font-size:18px;
+    font-weight:600;
+    color:#6D4C41;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    text-align:left;
+    transition:.3s;
+}
+
+.faq-question:hover{
+    background:#FFF6EC;
+}
+
+.faq-question span{
+    font-size:28px;
+    color:#F4A261;
+    transition:.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+}
+
+.faq-answer p{
+    padding:0 30px 25px;
+    color:#666;
+    line-height:1.8;
+    text-align:left;
+}
+
+.faq-item.active .faq-question span{
+    transform:rotate(45deg);
+}
+
+/* =========================
    Booking & Pricing
 ========================= */
 
@@ -474,6 +635,76 @@ nav a:hover{
 }
 
 /* =========================
+   Floating WhatsApp
+========================= */
+
+.whatsapp-btn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:34px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    transition:.3s;
+    z-index:999;
+}
+
+.whatsapp-btn:hover{
+    transform:scale(1.08);
+}
+
+.whatsapp-tooltip{
+    position:absolute;
+    right:80px;
+    background:white;
+    color:#333;
+    padding:12px 18px;
+    border-radius:12px;
+    white-space:nowrap;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    font-size:15px;
+    font-weight:500;
+}
+
+.whatsapp-btn:hover .whatsapp-tooltip{
+    opacity:1;
+    visibility:visible;
+
+.whatsapp-tooltip.show{
+    opacity:1;
+    visibility:visible;
+}
+
+}
+
+@media (max-width:768px){
+
+    .whatsapp-btn{
+        width:58px;
+        height:58px;
+        font-size:30px;
+        right:20px;
+        bottom:20px;
+    }
+
+    .whatsapp-tooltip{
+        display:none;
+    }
+
+}
+
+/* =========================
    Responsive Design
 ========================= */
 
@@ -588,7 +819,21 @@ nav.active{
     gap:18px;
 }
 
+.review-grid{
+    grid-template-columns:1fr;
 }
+
+.faq-question{
+    font-size:16px;
+    padding:20px;
+}
+
+.faq-answer p{
+    padding:0 20px 20px;
+}
+
+}
+
 
 @media (max-width:600px){
 
