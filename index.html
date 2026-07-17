@@ -406,6 +406,53 @@ Daily walks, playtime, cuddles and regular photo updates.
 
 </section>
 
+<section class="cta">
+
+    <div class="cta-content">
+
+        <div class="cta-icon">🐾</div>
+
+        <h2>Ready to Give Your Dog a Home Away From Home</h2>
+
+        <p>
+            Whether you're travelling, working, or simply need someone you can trust, PawNest provides a safe, loving, and cage-free home where your dog will be treated like family.
+        </p>
+
+        <a
+            href="https://wa.me/918074480396?text=Hi!%20👋%0A%0AI'd%20like%20to%20know%20more%20about%20boarding%20availability%20for%20my%20dog."
+            class="cta-btn"
+            target="_blank">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            Check Availability on WhatsApp
+
+        </a>
+
+        <p class="cta-small">
+             We're happy to answer any questions before you book.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="location">
+
+    <h2>Find PawNest</h2>
+
+    <p class="location-intro">
+        Located at Nadergul, Hyderabad.
+We proudly welcome dogs from across Hyderabad. Visits are by appointment, giving every guest the time, care, and attention they deserve.
+    </p>
+
+    <div class="map-container">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.8208878301934!2d78.53323912499505!3d17.275898233592436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba3baf84342d1%3A0xcfedef6d0551f076!2sGreen%20Homes%20Colony%2C%20Nadargul%2C%20Telangana%20501510!5e0!3m2!1sen!2sin!4v1784207084163!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+    </div>
+
+</section>
+
 <section class="contact" id="contact">
 
     <h2>Bookings & Enquiries</h2>
@@ -436,20 +483,73 @@ Daily walks, playtime, cuddles and regular photo updates.
 
     </div>
 
-    <form class="contact-form">
+    <form class="contact-form" id="contactForm">
 
-        <input type="text" placeholder="Your Name" required>
+    <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required>
 
-        <input type="tel" placeholder="Phone Number" required>
+    <input
+        type="tel"
+        id="phone"
+        placeholder="Phone Number"
+        required>
 
-        <textarea
-            placeholder="Tell us about your dog (breed, age, boarding dates, or any special requirements)"
-            rows="6"
-            required></textarea>
+    <input
+        type="text"
+        id="dogName"
+        placeholder="Dog's Name"
+        required>
 
-        <button type="submit">Send Enquiry</button>
+    <input
+        type="text"
+        id="breed"
+        placeholder="Breed"
+        required>
 
-    </form>
+    <input
+        type="text"
+        id="dates"
+        placeholder="Preferred Boarding Dates"
+        required>
+
+    <textarea
+        id="notes"
+        rows="6"
+        placeholder="Anything you'd like us to know? (Medication, feeding schedule, special care, etc.)"></textarea>
+
+    <div class="contact-method">
+
+        <p>Preferred Contact Method</p>
+
+        <label>
+            <input
+                type="radio"
+                name="contact"
+                value="whatsapp"
+                checked>
+
+            💬 WhatsApp <span>(Fastest Response)</span>
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="contact"
+                value="email">
+
+            📧 Email
+        </label>
+
+    </div>
+
+    <button type="submit">
+        🐾 Check Availability
+    </button>
+
+</form>
 
 </section>
 

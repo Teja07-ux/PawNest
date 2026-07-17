@@ -56,3 +56,59 @@ faqQuestions.forEach(question => {
     });
 
 });
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const dogName = document.getElementById("dogName").value;
+    const breed = document.getElementById("breed").value;
+    const dates = document.getElementById("dates").value;
+    const notes = document.getElementById("notes").value;
+
+    const contactMethod = document.querySelector(
+        'input[name="contact"]:checked'
+    ).value;
+
+    const message =
+`Hi! 👋
+
+I'd like to check boarding availability.
+
+👤 Name: ${name}
+
+📞 Phone: ${phone}
+
+🐶 Dog's Name: ${dogName}
+
+🐾 Breed: ${breed}
+
+📅 Preferred Dates: ${dates}
+
+📝 Additional Information:
+${notes}`;
+
+    if(contactMethod === "whatsapp"){
+
+        const whatsapp =
+`https://wa.me/918074480396?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsapp, "_blank");
+
+    }else{
+
+        const subject =
+encodeURIComponent("PawNest Boarding Enquiry");
+
+        const body =
+encodeURIComponent(message);
+
+        window.location.href =
+`mailto:bookings.pawnest@gmail.com?subject=${subject}&body=${body}`;
+
+    }
+
+});
