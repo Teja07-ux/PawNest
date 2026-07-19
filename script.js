@@ -112,3 +112,13 @@ encodeURIComponent(message);
     }
 
 });
+
+const bookBtn = document.getElementById("bookBtn");
+
+if (bookBtn) {
+    bookBtn.addEventListener("click", () => {
+        document.getElementById("contact").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+}

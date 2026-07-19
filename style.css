@@ -35,6 +35,9 @@ section{
 .logo{
     font-size:30px;
     font-weight:700;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 nav{
@@ -982,6 +985,16 @@ nav{
 
 nav.active{
     display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    width:100%;
+    padding:20px 0;
+}
+
+nav.active a{
+    width:100%;
+    text-align:center;
 }
 
 .about{
