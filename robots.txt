@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://teja07-ux.github.io/PawNest/sitemap.xml

@@ -988,6 +988,69 @@ nav a:hover{
     transform:translateY(0);
 }
 
+.social-section{
+
+    text-align:center;
+    margin-top:50px;
+    padding-top:35px;
+    border-top:1px solid rgba(255,255,255,.15);
+
+}
+
+.social-section h3{
+
+    color:white;
+    margin-bottom:15px;
+    font-size:26px;
+
+}
+
+.social-section p{
+
+    color:rgba(255,255,255,.85);
+    max-width:650px;
+    margin:0 auto 25px;
+    line-height:1.8;
+    font-size:16px;
+
+}
+
+.instagram-btn{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        45deg,
+        #833AB4,
+        #FD1D1D,
+        #FCAF45
+    );
+
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    font-size:16px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.instagram-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
 /* =========================
    Responsive Design
 ========================= */
