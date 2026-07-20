@@ -122,3 +122,94 @@ if (bookBtn) {
         });
     });
 }
+
+const navbar = document.querySelector(".navbar");
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>20){
+        navbar.classList.add("scrolled");
+    }else{
+        navbar.classList.remove("scrolled");
+    }
+})
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 400) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+
+});
+
+backToTop.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+
+    const currentScrollY = window.scrollY;
+
+    // Shadow
+    if (currentScrollY > 20) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+
+    // Hide when scrolling down
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        navbar.classList.add("hide");
+    }
+
+    // Show when scrolling up
+    if (currentScrollY < lastScrollY) {
+        navbar.classList.remove("hide");
+    }
+
+    lastScrollY = currentScrollY;
+
+});
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealSections(){
+
+    reveals.forEach(section=>{
+
+        const top = section.getBoundingClientRect().top;
+
+        if(top < window.innerHeight - 120){
+
+            section.classList.add("active");
+
+            const items = section.querySelectorAll(".reveal-item");
+
+            items.forEach((item,index)=>{
+
+                setTimeout(()=>{
+
+                    item.classList.add("active");
+
+                },index*150);
+
+            });
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll",revealSections);
+window.addEventListener("load",revealSections);

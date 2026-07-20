@@ -18,6 +18,36 @@ section{
     scroll-margin-top:80px;
 }
 
+.host-highlights div,
+.requirement-card,
+.price-card,
+.contact-card,
+.faq-item{
+
+    transition:transform .3s ease,
+               box-shadow .3s ease;
+
+}
+
+.host-highlights div:hover,
+.requirement-card:hover,
+.price-card:hover,
+.contact-card:hover,
+.faq-item:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus{
+    outline:3px solid #F4A261;
+    outline-offset:3px;
+}
+
 /* Navigation */
 
 .navbar{
@@ -30,6 +60,12 @@ section{
     position:sticky;
     top:0;
     z-index:1000;
+    transition: transform .3s ease, box-shadow .3s ease;
+
+}
+
+.navbar.hide{
+    transform: translateY(calc(-100% - 5px));  
 }
 
 .logo{
@@ -101,21 +137,21 @@ nav a:hover{
     margin-top:35px;
 }
 
-.hero button:hover{
-    transform:translateY(-3px);
+.hero button:hover,
+.submit-btn:hover{
+    transform:translateY(-3px) scale(1.03);
 }
 
 .hero-image{
     width:45%;
     max-width:600px;
     height:420px;
+    overflow:hidden;
+    border-radius:25px;
 }
 
-.hero-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:25px;
+.hero-image:hover img{
+    transform:scale(1.03);
 }
 
 .hero-image img{
@@ -125,6 +161,7 @@ nav a:hover{
     object-position:center;
     border-radius:25px;
     box-shadow:0 25px 60px rgba(0,0,0,.15);
+    transition: transform .5s ease;
 }
 
 .menu-toggle{
@@ -612,7 +649,7 @@ nav a:hover{
     background:#FFF8F1;
     padding:50px;
     border-radius:25px;
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
 }
 
 .pricing-card h3{
@@ -691,7 +728,7 @@ nav a:hover{
     background:white;
     padding:35px;
     border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
     transition:.3s;
 }
 
@@ -847,7 +884,7 @@ nav a:hover{
 
 .whatsapp-btn{
     position:fixed;
-    bottom:30px;
+    bottom:25px;
     right:30px;
     width:65px;
     height:65px;
@@ -887,28 +924,68 @@ nav a:hover{
 .whatsapp-btn:hover .whatsapp-tooltip{
     opacity:1;
     visibility:visible;
-
+}
 .whatsapp-tooltip.show{
     opacity:1;
     visibility:visible;
 }
 
+
+/* =======================
+    Back to top
+========================= */
+
+.back-to-top{
+    position:fixed;
+    right:30px;
+    bottom:95px;
+    width:65px;
+    height:65px;
+    border:none;
+    border-radius:50%;
+    background:#6D4C41;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(15px);
+    transition:all .3s ease;
+    z-index:999;
 }
 
-@media (max-width:768px){
+.back-to-top.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
 
-    .whatsapp-btn{
-        width:58px;
-        height:58px;
-        font-size:30px;
-        right:20px;
-        bottom:20px;
-    }
+.back-to-top:hover{
+    background:#F4A261;
+    transform:translateY(-3px);
+}
 
-    .whatsapp-tooltip{
-        display:none;
-    }
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:opacity .7s ease, transform .7s ease;
+}
 
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.reveal-item{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all .6s ease;
+}
+
+.reveal-item.active{
+    opacity:1;
+    transform:translateY(0);
 }
 
 /* =========================
@@ -922,7 +999,14 @@ nav a:hover{
     justify-content:space-between;
     align-items:center;
     padding:18px 20px;
-    position:relative;
+    position:sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow .3s ease;
+}
+
+.navbar.scrolled{
+    box-shadow: 0 4px 15px rgba(0,0,0,.12);
 }
 
     nav{
@@ -941,10 +1025,7 @@ nav a:hover{
 
     .hero-text{
         width:100%;
-    }
-
-    .hero-text{
-    margin-top:20px;
+        margin-top:20px;
 }
     
     .hero-image{
@@ -1087,6 +1168,27 @@ nav.active a{
     height:320px;
 }
 
+.back-to-top{
+    width:50px;
+    height:50px;
+    right:20px;
+    bottom:85px;
+}
+
+}
+
+@media (max-width:768px){
+
+    .whatsapp-btn{
+        width:58px;
+        height:58px;
+        font-size:30px;
+        right:20px;
+        bottom:20px;
+    }
+    .whatsapp-tooltip{
+        display:none;
+    }
 }
 
 
@@ -1170,4 +1272,5 @@ nav.active a{
         max-width:250px;
         font-size:17px;
     }
+
 }
