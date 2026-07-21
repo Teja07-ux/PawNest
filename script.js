@@ -11,6 +11,20 @@ menuToggle.addEventListener("click", () => {
     }
 });
 
+// Close mobile menu after clicking a navigation link
+const navLinks = document.querySelectorAll("#nav-menu a");
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navMenu.classList.remove("active");
+        menuToggle.innerHTML = "☰";
+
+    });
+
+});
+
 // WhatsApp tooltip animation
 
 const whatsappTooltip = document.querySelector(".whatsapp-tooltip");
@@ -38,9 +52,21 @@ faqQuestions.forEach(question => {
     question.addEventListener("click", () => {
 
         const faqItem = question.parentElement;
-
         const answer = faqItem.querySelector(".faq-answer");
 
+        // Close all other FAQs
+        document.querySelectorAll(".faq-item").forEach(item => {
+
+            if(item !== faqItem){
+
+                item.classList.remove("active");
+                item.querySelector(".faq-answer").style.maxHeight = null;
+
+            }
+
+        });
+
+        // Toggle current FAQ
         if(faqItem.classList.contains("active")){
 
             faqItem.classList.remove("active");
@@ -56,6 +82,7 @@ faqQuestions.forEach(question => {
     });
 
 });
+
 const form = document.getElementById("contactForm");
 
 form.addEventListener("submit", function(e){
@@ -124,14 +151,6 @@ if (bookBtn) {
 }
 
 const navbar = document.querySelector(".navbar");
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY>20){
-        navbar.classList.add("scrolled");
-    }else{
-        navbar.classList.remove("scrolled");
-    }
-})
 
 const backToTop = document.getElementById("backToTop");
 
