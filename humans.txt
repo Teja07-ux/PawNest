@@ -1,0 +1,32 @@
+/* TEAM */
+
+Developer and Designer: Teja
+Project: PawNest
+Location: Hyderabad, India
+
+/* SITE */
+
+Website: https://pawnestcare.netlify.app
+Version: 1.1 (In Progress)
+
+Built with:
+- HTML5
+- CSS3
+- JavaScript
+
+Fonts:
+- Poppins (Google Fonts)
+
+Icons:
+- Font Awesome
+
+Hosted on:
+- Netlify
+
+Repository:
+- https://github.com/Teja07-ux/PawNest
+
+/* THANK YOU */
+
+Thank you for visiting PawNest.
+Built with care for happy dogs and their humans. 🐾

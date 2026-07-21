@@ -840,6 +840,53 @@ nav a:hover{
     font-weight:600;
 }
 
+.instagram-banner{
+
+    margin:70px auto 20px;
+    padding:30px;
+    max-width:700px;
+
+    background:#FFF6EC;
+
+    border-radius:18px;
+
+    text-align:center;
+
+}
+
+.instagram-banner p{
+
+    color:#6D4C41;
+    font-size:18px;
+    margin-bottom:18px;
+
+}
+
+.instagram-btn{
+
+    display:inline-block;
+
+    background:#E1306C;
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 32px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.instagram-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
 /* =========================
    Footer
 ========================= */
@@ -1363,6 +1410,146 @@ nav.active a{
         width:100%;
         max-width:250px;
         font-size:17px;
+    }
+
+}
+
+/* =========================
+   404 Page
+========================= */
+
+.error-page{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#FDF8F2;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.error-container{
+
+    max-width:650px;
+
+}
+
+.error-emoji{
+
+    font-size:90px;
+
+    margin-bottom:25px;
+
+}
+
+.error-page h1{
+
+    font-size:90px;
+
+    color:#6D4C41;
+
+    margin-bottom:15px;
+
+}
+
+.error-page h2{
+
+    font-size:34px;
+
+    color:#6D4C41;
+
+    margin-bottom:20px;
+
+}
+
+.error-page p{
+
+    font-size:19px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+/* =========================
+   Loading Screen
+========================= */
+
+#loader{
+
+    position:fixed;
+    inset:0;
+
+    background:#FDF8F2;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    transition:opacity .5s ease, visibility .5s ease;
+
+}
+
+#loader.hidden{
+
+    opacity:0;
+    visibility:hidden;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+.loader-paw{
+
+    font-size:70px;
+
+    margin-bottom:18px;
+
+    animation:bounce 1.2s infinite;
+
+}
+
+.loader-content h2{
+
+    color:#6D4C41;
+
+    font-size:36px;
+
+    margin-bottom:10px;
+
+}
+
+.loader-content p{
+
+    color:#777;
+
+    font-size:18px;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
     }
 
 }

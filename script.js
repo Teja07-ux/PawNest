@@ -232,3 +232,17 @@ function revealSections(){
 
 window.addEventListener("scroll",revealSections);
 window.addEventListener("load",revealSections);
+
+// Loading Screen
+
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+
+        loader.classList.add("hidden");
+
+    }, 1000);
+
+});
