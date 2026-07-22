@@ -261,11 +261,23 @@ nav a:hover{
     padding:35px 30px;
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.icon{
+    transition:transform .3s ease;
+}
+
+.service-card:hover .icon{
+    transform:scale(1.1);
 }
 
 .service-card:hover{
-    transform:translateY(-8px);
+    transform: translateY(-12px) scale(1.02) !important;
+    box-shadow: 0 20px 45px rgba(0,0,0,.16) !important;
 }
 
 .icon{
